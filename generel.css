@@ -13,7 +13,7 @@ body {
   background-color: #f3af57;
 }
 
-/*  billeder */
+/*  billeder & video */
 img {
   max-width: 100%;
   height: auto;
@@ -150,4 +150,18 @@ ul :hover {
     flex: 1 1 100%;
     flex-flow: column;
   }
+}
+
+/* Call-to-actionknap */
+
+.cta {
+  font-family: bebasNeue;
+  margin-top: 1px;
+  padding: 2px;
+  border: #000 0.5px solid;
+  background-color: #f3af57;
+}
+
+.cta:hover {
+  background-color: #6d808a;
 }
