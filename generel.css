@@ -1,0 +1,153 @@
+/* Generelt */
+/* Nulstiller alle typografier, så jeg kan lave alt selv */
+* {
+  all: unset;
+  display: revert;
+  cursor: revert;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  background-color: #6d808a;
+  background-color: #f3af57;
+}
+
+/*  billeder */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.video_01 {
+  max-width: 100%;
+}
+
+/* fonts */
+@font-face {
+  font-family: BebasNeue;
+  src: url(fonts/bebas_neue/BebasNeue-Regular.ttf) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: BodoniMode;
+  src: url(fonts/Bodoni_Moda/BodoniModa-Italic-VariableFont_opsz\wght.ttf)
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Regler for tekst */
+h1,
+h2,
+h3 {
+  font-family: BebasNeue;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 2rem;
+  background-color: #6d808a;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 70ch;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: white;
+  padding: 3rem;
+  border: 1px solid;
+}
+
+header ul li {
+  font-family: BodoniModa;
+  list-style: none;
+  padding: 5px 20px;
+
+  border: 0.5px solid black;
+  background-color: #f3af57;
+  border-radius: 2px;
+}
+
+ul {
+  display: flex;
+  align-items: end;
+  place-content: space-around;
+  gap: 1rem;
+}
+
+ul :hover {
+  color: #f3af57;
+  background-color: #6d808a;
+}
+
+/* burger-menu */
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+  display: flex;
+  gap: 10px;
+}
+
+/* burgermenu */
+.toggle-btn {
+  background: #f3af57;
+  border: 0.5px solid black;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0px 5px;
+  font-family: BebasNeue;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  display: none; /* Skjul knappen som standard */
+}
+
+@media (max-width: 600px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+  }
+
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+}

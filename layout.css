@@ -1,0 +1,61 @@
+/* Forside */
+.container {
+  background-color: #bcc8cf;
+}
+
+.splash {
+  max-width: 100%;
+  margin-bottom: -10px;
+}
+
+/* Om mig */
+
+.cv {
+  text-align: center;
+}
+
+/* Grundlæggende html */
+
+.container {
+  background-color: white;
+  margin-bottom: 5rem;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box-1 {
+  padding-inline: 5rem;
+  margin: 60px 0px;
+  place-content: center;
+}
+.box-2 {
+  padding-inline-end: 5rem;
+  margin: 60px 0px;
+  place-content: center;
+}
+
+.web {
+  background-color: #6d808a;
+}
+
+/* Grundlæggende UX */
+
+/* animation */
+
+/* indhold */
+
+@media (orientation: portrait) and (max-width: 600px) {
+  .grid_1-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .avocadoimg {
+    align-items: center;
+  }
+  .box-2 {
+    padding-inline: 5rem;
+  }
+}
