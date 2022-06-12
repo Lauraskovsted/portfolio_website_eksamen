@@ -21,6 +21,7 @@ img {
 
 .logo {
   max-width: 100px;
+  align-items: end;
 }
 
 .video_01 {
@@ -93,12 +94,11 @@ header ul li {
 
 ul {
   display: flex;
-  align-items: end;
+  text-align: center;
   place-content: space-around;
-  gap: 1rem;
 }
 
-ul :hover {
+.navigation :hover {
   color: #f3af57;
   background-color: #6d808a;
 }
@@ -129,7 +129,11 @@ ul :hover {
   display: none; /* Skjul knappen som standard */
 }
 
-@media (max-width: 600px) {
+.toggle-btn:hover {
+  background-color: #6d808a;
+}
+
+@media (max-width: 700px) {
   .toggle-btn {
     display: block; /* Vis knappen, når viewporten maksimalt er 600px */
   }
@@ -153,7 +157,6 @@ ul :hover {
 }
 
 /* Call-to-actionknap */
-
 .cta {
   font-family: bebasNeue;
   margin-top: 1px;
