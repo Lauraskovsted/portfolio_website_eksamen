@@ -1,17 +1,18 @@
-// Lav variablen "btn", der henviser til ".toggle-btn"
+// Laver variablen "btn", som henviser til klassen ".toggle-btn", som er knappen menu.
 const btn = document.querySelector(".toggle-btn");
-// Lav variablen "menu", der henviser til ".main-menu"
+
+// Laver variablen "menu", som henviser til Klassen ".main-menu", som er på nav elementet
 const menu = document.querySelector(".main-menu");
 
-// Lav funktionen "toggleMenu()" med følgende funktionalitet
+// funktionen "toggleMenu()" gør at menuen kan blive slået til og fra.
 function toggleMenu() {
-  // a) toggle klassen "shown" på menu vha. classList.toggle
+  // Nav elementet (menu), får tilføjet klassen toggle, så når man klikker nav-elementet frem bliver det shown.
   menu.classList.toggle("shown");
 
-  // b) lav variablen "menuShown", som siger, at menu-variablen indeholder klassen "shown" via classList.contains("")
+  // Herefter laver jeg variablen "menuShown", som siger at hvis jeg klikker på menu (nav-element), så vil den handle udfra det der står i shown, altså at menu-variablen indeholder klassen "shown" via classList.contains("") contain.
   const menuShown = menu.classList.contains("shown");
 
-  // c) spørg om "menuShown" i if-sætningen nedenfor (=> if (menuShown)), og udskift teksten
+  // Herefter spørger jeg "menuShown" med en if-sætning om, når jeg klikker på btn enten at have Luk eller menu stående, til når menuen er åben og lukket.
   if (menuShown) {
     console.log(menuShown); // se i konsollen
     // sæt btn.textContent til "Luk", hvis menuShown er "true"

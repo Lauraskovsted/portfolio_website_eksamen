@@ -9,7 +9,7 @@
     <title>Forside</title>
   </head>
   <body>
-    <header class="banner">
+      <header class="banner">
       <div class="logo">
         <a href="index.html">
           <img src="favicon2.svg" alt="logo" class="logo"
@@ -22,15 +22,36 @@
           <li>
             <a href="cv.html">Om mig</a>
           </li>
-          <li>
-            <a href="portfolio.html">Portfolio-site</a>
-          </li>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <a href="portfolio.html">Portfolio</a>
+            </button>
+            <div class="dropdown-content">
+              <li>
+                <a href="web.html">Tema_02</a>
+              </li>
+
+              <li>
+                <a href="ux.html">Tema_03</a>
+              </li>
+              <li>
+                <a href="animation.html">Tema_04</a>
+              </li>
+              <li>
+                <a href="indhold.html">Tema_05</a>
+              </li>
+              <li>
+                <a href="tema06.html">Tema_06</a>
+              </li>
+            </div>
+          </div>
         </ul>
       </nav>
     </header>
     <main>
       <div class="container">
-        <img src="splashbillede-100.jpg" alt="splashbillede" class="splash" />
+        <div class="splash">
+          <p class="splash_text01">LAURA SKOVSTED <br> <span class="splash_text02">Portfolio eksamen, 2022</span> </p>
       </div>
     </main>
     <script src="index.js"></script>
