@@ -1,7 +1,11 @@
 /* ********************* Forside *********************** */
+.splash_container {
+  background: hsla(205, 17%, 78%, 1);
+}
 .splash {
   aspect-ratio: 1920/1080;
   background-image: url(splashbillede_blaa.svg);
+
   background-size: cover;
   display: grid;
   place-content: center;
@@ -13,6 +17,7 @@
   color: #f3af57;
   display: grid;
   place-content: center;
+  line-height: normal;
 }
 
 .splash_text02 {
@@ -21,6 +26,7 @@
   color: #f3af57;
   display: grid;
   place-content: end;
+  line-height: normal;
 }
 
 /* ********************** Om mig *********************** */
@@ -38,10 +44,9 @@
 }
 
 /* Box-3 */
-
 .box-3 {
-  margin-top: 50px;
-  padding-inline: 50px;
+  margin-top: 20px;
+  padding: 20px 85px 50px;
 }
 
 .box-3 > p,
@@ -52,11 +57,7 @@ h3 {
 
 /* Box-4 */
 .box-4 {
-  margin-top: 20px;
-  padding-inline: 85px;
-  background-color: antiquewhite;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding: 20px 85px 50px;
   background-color: antiquewhite;
   border-top: 5px #f3af57 solid;
 }
@@ -66,9 +67,12 @@ h3 {
   flex-direction: column;
   gap: 35px;
   text-align: left;
-}
-.cv_liste {
   place-self: center;
+}
+
+.cv_liste {
+  padding-left: 33px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Billede af mig */
@@ -87,6 +91,8 @@ h3 {
 /* ********************** Grundlæggende html, UX, Animation, indhold og portfolio ************************* */
 .container {
   background-color: white;
+  border-left: #6d808a 2px solid;
+  border-right: #6d808a 2px solid;
 }
 
 .grid_1-1 {
@@ -94,37 +100,69 @@ h3 {
   grid-template-columns: 1fr 1fr;
 }
 
+article {
+  padding: 30px;
+}
+
 .box-1 {
   padding-inline: 5rem;
   margin: 60px 0px;
-  place-content: center;
 }
 
 .box-2 {
-  padding-inline-end: 5rem;
+  padding-inline: 5rem;
   margin: 60px 0px;
+}
+
+.box-6 {
+  display: grid;
   place-content: center;
+  margin-top: 60px;
 }
 
 .web {
   background-color: #6d808a;
 }
 
-/* ***** UX-billeder ****** */
-.vand {
+/* Html - billeder */
+#menukort {
   display: grid;
-  place-content: center;
-
-  width: 300px;
-  margin-left: 120px;
-  margin-bottom: 10px;
+  place-items: end;
 }
 
-/* ****** Animation billeder ******* */
+/* ***** UX-billeder ****** */
+/* .vand {
+  width: 300px;
+  margin-bottom: 10px;
+} */
 
+#pitch {
+  display: grid;
+  place-content: center;
+}
+/* ****** Animation billeder ******* */
 .java {
   width: 300px;
   margin-bottom: 10px;
+}
+
+#papir {
+  display: grid;
+  place-content: center;
+}
+
+#kode {
+  display: grid;
+}
+
+#kode2 {
+  display: grid;
+  place-content: center;
+}
+
+/* Grundlæggende indhold */
+.box-2 > .video :last-child {
+  margin-top: auto;
 }
 
 /* ******************************** portfolio - oversigt ***************************** */
@@ -154,29 +192,93 @@ h3 {
 .hover1 {
   display: grid;
   place-content: center;
+  border: #f3af57 5px solid;
 }
 
 .middle {
   transition: 0.5s ease;
   opacity: 0;
-  place-content: center;
+  border: #6d808a 1px dotted;
+  margin-bottom: 10px;
 }
 
 /* Text-box - design */
 .text1 {
   display: grid;
   place-content: center;
-  place-self: center;
   background-color: #6d808a;
   color: white;
-  font-family: BebasNeue;
+  font-family: BodoniModa;
   font-size: 16px;
   padding: 16px 32px;
 }
 
 /* ******************** Media queries ********************* */
 
+@media (orientation: portrait) and (max-width: 1000px) {
+  /* Om mig side */
+  .grid_2-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Om mig siden - box -3, hvem er jeg */
+  .box-3 {
+    padding-top: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(246, 232, 202);
+  }
+
+  .box-3,
+  .box-4 {
+    padding-inline: 30px;
+    padding-bottom: 20px;
+  }
+
+  /* Om mig siden - box-4, mit cv */
+  .box-4 {
+    margin-top: 20px;
+    padding-inline: 85px;
+    background-color: white;
+    border-top: none;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  /* Om mig - box-5 mit billede */
+
+  .grid_2-1 > .box-5,
+  .mig {
+    display: grid;
+    place-content: center;
+    margin-right: 20px;
+  }
+
+  .box-5 {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: none;
+  }
+
+  .mig {
+    width: 50%;
+    place-self: center;
+  }
+}
 @media (orientation: portrait) and (max-width: 600px) {
+  /* Splashbillede tekst */
+  .splash_text01 {
+    font-size: 1.5rem;
+  }
+  .splash_text02 {
+    font-size: 0.5rem;
+  }
+
+  /* Om mig */
+  .cv_liste {
+    padding-left: 0px;
+  }
+
   /* Tema siderne */
   .grid_1-1 {
     display: flex;
@@ -185,8 +287,21 @@ h3 {
   .avocadoimg {
     align-items: center;
   }
+  .box-1 {
+    padding-inline: 5rem;
+    margin: 0px;
+  }
+
   .box-2 {
     padding-inline: 5rem;
+    margin: 0px;
+  }
+
+  .box-6 {
+    display: grid;
+    place-content: center;
+    padding-inline: 5rem;
+    margin-top: 10px;
   }
 
   /* Portfolio oversigt */
@@ -201,54 +316,7 @@ h3 {
     margin-left: 0px;
     margin-bottom: 10px;
   }
-}
-
-@media (orientation: portrait) and (max-width: 1000px) {
-  /* Om mig side */
-
-  .grid_2-1 {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .box-3 {
-    padding-top: 30px;
-    margin-bottom: 20px;
-    background-color: rgb(246, 232, 202);
-  }
-
-  .box-3,
-  .box-4 {
-    padding-inline: 30px;
-    padding-bottom: 20px;
-  }
-
-  /* Billede af mig */
-
-  .box-4 {
-    margin-top: 20px;
-    padding-inline: 85px;
-    background-color: white;
-    border-top: none;
-    padding-top: 20px;
-    padding-bottom: 50px;
-  }
-
-  .box-5 {
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border-left: none;
-  }
-
-  .grid_2-1 > .box-5,
-  .mig {
-    display: grid;
-    place-content: center;
-    margin-right: 20px;
-  }
-
-  .mig {
-    width: 50%;
-    place-self: center;
+  .papir {
+    margin-top: 0px;
   }
 }
